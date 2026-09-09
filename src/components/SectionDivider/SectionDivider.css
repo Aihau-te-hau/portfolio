@@ -1,0 +1,19 @@
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.section-divider > span:first-child,
+.section-divider > span:last-child {
+  height: 1px;
+  background-color: var(--color-gold);
+  flex: 1;
+}
+
+.section-divider-star {
+  color: var(--color-gold);
+  font-size: 1.2rem;
+  line-height: 1;
+}
