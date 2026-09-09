@@ -1,5 +1,5 @@
 import './Card.jsx'
-import './Hero.css'
+import './Hero.sss'
 
 function Hero() {
     return (

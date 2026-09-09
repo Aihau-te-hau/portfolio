@@ -1,4 +1,5 @@
 import Logo from './Logo.jsx'
+import './Header.scss'
 
 function Header() {
     return (
@@ -11,8 +12,8 @@ function Header() {
                     <Logo />
 
                     <div className="header-identity">
-                        <p className="header-name">Aihau-te-hau</p>
-                        <p className="header-title">Développeur web</p>
+                        <p className="header-name">AIHAU-TE-HAU</p>
+                        <p className="header-title">DÉVELOPPEUR WEB</p>
                     </div>
                 </a>
             </div>
@@ -20,16 +21,16 @@ function Header() {
             <nav aria-label="Navigation principale">
                 <ul>
                     <li>
-                        <a href="#about">À propos</a>
+                        <a href="#about">À PROPOS</a>
                     </li>
                     <li>
-                        <a href="#projects">Projets</a>
+                        <a href="#projects">PROJETS</a>
                     </li>
                     <li>
-                        <a href="#skills">Compétences</a>
+                        <a href="#skills">COMPÉTENCES</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </nav>
