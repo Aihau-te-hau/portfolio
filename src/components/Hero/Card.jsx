@@ -117,9 +117,28 @@ function Card() {
         FULL-STACK
       </text>
 
-      {/* Developer */}
+      {/* Séparateur étoilé */}
       <line
         x1="220"
+        y1="340"
+        x2="285"
+        y2="340"
+        stroke="currentColor"
+        strokeWidth="1"
+      />
+
+      <text
+        x="300"
+        y="344"
+        textAnchor="middle"
+        fontSize="12"
+        fill="currentColor"
+      >
+        ✦
+      </text>
+
+      <line
+        x1="315"
         y1="340"
         x2="380"
         y2="340"
@@ -127,6 +146,7 @@ function Card() {
         strokeWidth="1"
       />
 
+      {/* Developer */}
       <text
         x="300"
         y="375"
@@ -181,7 +201,7 @@ function Card() {
         fill="currentColor"
         opacity="0.6"
       >
-        2024 - 2025
+        2024 - 2026
       </text>
 
       {/* Arcs décoratifs */}

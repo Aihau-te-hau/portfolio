@@ -4,26 +4,26 @@ import "./About.scss";
 function About() {
   return (
     <section className="about" id="about">
-      <div className="about__container">
+      <div className="about-container">
 
         {/* En-tête */}
-        <div className="about__header">
-          <div className="about__line"></div>
+        <div className="about-header">
+          <div className="about-line"></div>
 
-          <span className="about__label">À PROPOS</span>
+          <span className="about-label label">À PROPOS</span>
 
-          <div className="about__line"></div>
+          <div className="about-line"></div>
         </div>
 
-        <h2 className="about__title">
+        <h2 className="about-title">
           Mon parcours & aspirations
         </h2>
 
         {/* Contenu */}
-        <div className="about__content">
+        <div className="about-content">
 
           {/* Texte */}
-          <div className="about__text">
+          <div className="about-text">
 
             <p>
               Passionné par la convergence du design et du code, j'ai suivi
@@ -47,25 +47,25 @@ function About() {
           </div>
 
           {/* Statistiques */}
-          <div className="about__stats">
+          <div className="about-stats">
 
-            <div className="about__stat">
-              <span className="about__stat-number">2 ans</span>
-              <span className="about__stat-text">
+            <div className="about-stat">
+              <span className="about-stat-number">2 ans</span>
+              <span className="about-stat-text">
                 Pratique & formation intensive
               </span>
             </div>
 
-            <div className="about__stat">
-              <span className="about__stat-number">20+</span>
-              <span className="about__stat-text">
+            <div className="about-stat">
+              <span className="about-stat-number">20+</span>
+              <span className="about-stat-text">
                 Projets personnels et académiques
               </span>
             </div>
 
-            <div className="about__stat">
-              <span className="about__stat-number">100%</span>
-              <span className="about__stat-text">
+            <div className="about-stat">
+              <span className="about-stat-number">100%</span>
+              <span className="about-stat-text">
                 Engagé dans la qualité du code
               </span>
             </div>

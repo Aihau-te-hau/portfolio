@@ -5,7 +5,7 @@ import Projects from './components/Projects/Projects.jsx'
 import Skills from './components/Skills/Skills.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import Footer from './components/Footer/Footer.jsx'
-import './App.css'
+import './App.scss'
 
 function App() {
   return (

@@ -1,44 +1,50 @@
-import './Card.jsx'
-import './Hero.sss'
+import Card from "./Card.jsx";
+import SectionDivider from "../SectionDivider/SectionDivider.jsx";
+import './Hero.scss'
 
 function Hero() {
     return (
         <section id="home" className="hero">
             <div className="hero-content">
-                <p className="hero-availability">
-                    ✦ DISPONIBLE POUR OPPORTUNITÉS ✦
-                </p>
+                <div className="hero-content-parts">
+                    <p className="hero-label label">
+                        ✦ DISPONIBLE POUR OPPORTUNITÉS ✦
+                    </p>
 
-                <p className="hero-intro">
-                    CRÉER DES INTERFACES
-                </p>
+                    <p className="hero-intro">
+                        CRÉER DES INTERFACES
+                    </p>
 
-                <h1>
-                    Fluides
-                    <span aria-hidden="true">&</span>
-                    Interactives
-                </h1>
+                    <h1>
+                        Fluides
+                        <span aria-hidden="true" className="hero-accent">&</span>
+                        Interactives
+                    </h1>
 
-                <p className="hero-description">
-                    Développeur full-stack junior spécialisé dans la conception
-                    d'expériences web modernes avec React, TypeScript et Tailwind CSS.
-                    France, Suisse.
-                </p>
+                    <p className="hero-description">
+                        Développeur full-stack junior spécialisé dans la conception
+                        d'expériences web modernes avec React, TypeScript et Tailwind CSS.
+                        France, Suisse.
+                    </p>
 
-                <div className="hero-actions">
-                    <a href="#projects">
-                        Voir mes projets
-                    </a>
+                    <div className="hero-actions">
+                        <a href="#projects" className="hero-button-projects">
+                            VOIR MES PROJETS
+                        </a>
 
-                    <a href="#contact">
-                        Me contacter
-                    </a>
+                        <a href="#contact" className="hero-button-contact">
+                            ME CONTACTER
+                        </a>
+                    </div>
                 </div>
+
+                <div className="hero-card-wrapper">
+                    <Card />
+                </div>
+
             </div>
 
-            <div className="hero-card-wrapper">
-                {/* <Card /> */}
-            </div>
+            <SectionDivider />
         </section>
   )
 }

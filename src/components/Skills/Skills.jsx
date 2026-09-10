@@ -1,23 +1,29 @@
 import SectionDivider from '../SectionDivider/SectionDivider'
-import "./Skills.css"
+import "./Skills.scss"
 
 function Skills() {
     return (
         <section className="skills" id="skills">
         <div className="skills-header">
-            <div className="header-line"></div>
+            <div className="skills-line"></div>
 
-            <span className="section-label">
+            <span className="skills-label label">
             COMPÉTENCES
             </span>
 
-            <div className="header-line"></div>
+            <div className="skills-line"></div>
         </div>
 
         <h2>Mon arsenal technologique</h2>
 
             <div className="skills-grid">
-                <div className="skill-card">
+                <div className="skills-card">
+                    <div className="skills-card-separator">
+                        <SectionDivider />
+                    </div>
+
+                    <h3>Full-stack</h3>
+
                     <ul title="Full-stack">
                         <li>HTML5/CSS3</li>
                         <li>JavaScript ES6+</li>
@@ -28,7 +34,13 @@ function Skills() {
                         <li>API REST</li>
                     </ul>
                 </div>
-                <div className="skill-card">
+                <div className="skills-card">
+                    <div className="skills-card-separator">
+                        <SectionDivider />
+                    </div>
+
+                    <h3>Outils & Design</h3>
+                    
                     <ul title="Outils & Design">
                         <li>Figma</li>
                         <li>Git</li>
@@ -39,7 +51,13 @@ function Skills() {
                         <li>SEO</li>
                     </ul>
                 </div>
-                <div className="skill-card">
+                <div className="skills-card">
+                    <div className="skills-card-separator">
+                        <SectionDivider />
+                    </div>
+
+                    <h3>Gestion de projet & GRC</h3>
+
                     <ul title="Gestion de projet & GRC">
                         <li>Agile</li>
                         <li>Scrum</li>

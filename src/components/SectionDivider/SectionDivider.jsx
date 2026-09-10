@@ -1,11 +1,13 @@
-import './SectionDivider.css'
+import './SectionDivider.scss'
 
 function SectionDivider() {
   return (
     <div className="section-divider" aria-hidden="true">
-      <span></span>
+      <div className="section-divider-line"></div>
+
       <span className="section-divider-star">✦</span>
-      <span></span>
+      
+      <div className="section-divider-line"></div>
     </div>
   )
 }

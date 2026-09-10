@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard.jsx";
 import SectionDivider from "../SectionDivider/SectionDivider.jsx";
-import "./Projects.css";
+import "./Projects.scss";
 
 const projects = [
   {
@@ -27,13 +27,13 @@ function Projects() {
   return (
     <section className="projects" id="projects">
         <div className="projects-header">
-            <div className="header-line"></div>
+            <div className="header-line label-line"></div>
 
-            <span className="section-label">
+            <span className="section-label label">
             PROJETS SÉLECTIONNÉS
             </span>
 
-            <div className="header-line"></div>
+            <div className="header-line label-line"></div>
         </div>
 
         <h2>Mes récentes réalisations</h2>

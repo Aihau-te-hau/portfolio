@@ -3,13 +3,17 @@ import './Header.scss'
 
 function Header() {
     return (
-        <header>
+        <header className="header" id="header">
             <div className="header-brand">
                 <a
                 href="#home"
                 aria-label="Accueil - Portfolio de Aihau-te-hau"
+                className="header-brand-link"
                 >
-                    <Logo />
+                    <div className="header-logo-container">
+                        <p className="header-logo-text">AH</p>
+                        {/*<Logo /> */}
+                    </div>
 
                     <div className="header-identity">
                         <p className="header-name">AIHAU-TE-HAU</p>
@@ -19,7 +23,7 @@ function Header() {
             </div>
 
             <nav aria-label="Navigation principale">
-                <ul>
+                <ul className="header-nav">
                     <li>
                         <a href="#about">À PROPOS</a>
                     </li>
@@ -29,7 +33,7 @@ function Header() {
                     <li>
                         <a href="#skills">COMPÉTENCES</a>
                     </li>
-                    <li>
+                    <li className="header-contact-link">
                         <a href="#contact">CONTACT</a>
                     </li>
                 </ul>

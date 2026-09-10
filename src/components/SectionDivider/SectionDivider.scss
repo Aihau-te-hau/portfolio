@@ -1,0 +1,35 @@
+/*.section-divider > span:first-child,
+.section-divider > span:last-child {
+  height: 1px;
+  background-color: var(--color-gold);
+  flex: 1;
+}*/
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 75px 0;
+  color: #c99e32;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  &-star {
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  &-line {
+    flex: 1;
+    height: 1px;
+    background-color: #a88428;
+  }
+
+  @media (max-width: 600px) {
+    padding: 6px 14px;
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+}
