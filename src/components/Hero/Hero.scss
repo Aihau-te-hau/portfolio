@@ -4,7 +4,11 @@
     padding: 80px 8.3% 10px;
 
     &-card-wrapper {
-        background-color: linear-gradient(to bottom, #0D1822, #1A3040);
+
+        svg {
+            background: linear-gradient(to bottom, #0D1822, #1A3040);
+        }
+        
         color: #b58b29;
     }
 

@@ -32,6 +32,20 @@
                 height: 40px;
             }
         }
+
+        &:hover {
+            .header-logo-container {
+                background-color: #EDD9A3;
+            }
+
+            .header-name {
+                color: #C9A84C;
+            }
+
+            .header-title {
+                color: #EDD9A3;
+            }
+        }
     }
 
     &-title {

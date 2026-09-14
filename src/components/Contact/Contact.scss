@@ -1,0 +1,102 @@
+.contact {
+    background-color: #162B36;
+    color: #9db5c2;
+    padding: 80px 8.3% 10px;
+    
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+
+    &-container {
+        border-width: 0.75rem 0.25rem 0.25rem 0.25rem; 
+        border-style: solid;
+
+        // 2. Le dégradé horizontal appliqué à TOUT le cadre
+        // Le "1" à la fin (slice) est obligatoire pour couper l'image proprement sur les bords
+        border-image: linear-gradient(to right, #C9A84C, #EDD9A3, #C9A84C) 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+        width: 80%;
+
+        .section-divider {
+            padding: 25px 0;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+    }
+    
+    &-line {
+        flex: 1;
+        height: 1px;
+        background-color: #a88428;
+    }
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 25px;
+
+        @media (max-width: 600px) {
+            gap: 10px;
+        }
+    }
+
+    &-link {
+        color: #1B3340;
+        border: 1px solid #EDD9A3;
+        background-color: #C9A84C;
+        align-self: center;
+        padding: 20px;
+        font-weight: 600;
+
+        &:hover {
+            background-color: #EDD9A3;
+        }
+    }
+
+    .social-links {
+        color: #EDD9A3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 75px;
+        padding-bottom: 20px;
+
+        &-linkedin, &-github {
+            &:hover {
+                color: #a88428;
+            }
+        }
+    }
+
+    &-decoration {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-left {
+            border-top: 1px solid #a88428;
+            border-left: 1px solid #a88428;
+            height: 20px;
+            width: 20px;
+        }
+
+        &-right {
+            border-top: 1px solid #a88428;
+            border-right: 1px solid #a88428;
+            height: 20px;
+            width: 20px;
+        }
+    }
+    
+}

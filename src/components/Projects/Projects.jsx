@@ -1,27 +1,7 @@
+import projects from "../../data/projects.js";
 import ProjectCard from "./ProjectCard.jsx";
 import SectionDivider from "../SectionDivider/SectionDivider.jsx";
 import "./Projects.scss";
-
-const projects = [
-  {
-    title: "Dashboard Admin",
-    technologies: "REACT · TYPESCRIPT · TAILWIND CSS",
-    image: "/images/dashboard.jpg",
-    alt: "Dashboard administrateur",
-  },
-  {
-    title: "E-commerce Store",
-    technologies: "REACT · RESPONSIVE · ACCESSIBILITY",
-    image: "/images/ecommerce.jpg",
-    alt: "Site e-commerce",
-  },
-  {
-    title: "Portfolio V2",
-    technologies: "REACT · VITE · DESIGN SYSTEM",
-    image: "/images/portfolio.jpg",
-    alt: "Portfolio développeur",
-  },
-];
 
 function Projects() {
   return (

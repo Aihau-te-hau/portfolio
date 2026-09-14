@@ -1,5 +1,5 @@
 .projects {
-  background-color: #1B3340;
+  background: linear-gradient(to bottom, #162B36, #1E3F50, #1A3344);
   color: #9db5c2;
   padding: 80px 8.3% 10px;
 
@@ -20,133 +20,92 @@
     }
   }
 
-  /*&-line {
-    flex: 1;
-    height: 1px;
-    background-color: #a88428;
-  }*/
-
-  &-content {
+  &-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.65fr) minmax(350px, 0.9fr);
-    gap: 8%;
-    align-items: start;
-    margin-top: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-top: 50px;
 
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr;
-      gap: 50px;
+    .project-card {
+      background-color: #162B36;
+      border: 1px solid #A88428;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-image-wrapper {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+
+      .project-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        h3 {
+          margin: 0;
+          color: #f0d99a;
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(1.375rem, 4vw, 1.75rem);
+          line-height: 1.2;
+          font-weight: 500;
+
+          @media (max-width: 600px) {
+            font-size: 14px;
+          }
+        }
+
+        p {
+          margin: 15px 0px;
+          font-size: clamp(1rem, 2vw, 1.125rem);
+          line-height: 1.5;
+
+          @media (max-width: 600px) {
+            font-size: 12px;
+          }
+        }
+
+        a {
+          display: inline-block;
+          align-self: center;
+          margin-top: auto;
+          padding: 10px 20px;
+          background-color: #C9A84C;
+          color: #162B36;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #f0d99a;
     }
-
-    @media (max-width: 600px) {
-      margin-top: 45px;
-      gap: 40px;
-    }
-  }
-
-  &-text {
-    max-width: 800px;
-
-    @media (max-width: 900px) {
-      max-width: none;
-    }
-
-    p {
-      margin: 0 0 25px;
-      font-size: 20px;
-      line-height: 1.7;
-
-      @media (max-width: 600px) {
-        font-size: 17px;
+        }
       }
     }
 
-    blockquote {
-      margin: 25px 0 0;
-      padding: 20px 0 20px 20px;
-      border-left: 4px solid #d4aa35;
-      color: #f0d99a;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 18px;
-      line-height: 1.5;
-      font-weight: 700;
-
-      @media (max-width: 600px) {
-        padding-left: 15px;
-        font-size: 16px;
-      }
-    }
-  }
-
-  &-stats {
-    display: flex;
-    flex-direction: column;
-    gap: 19px;
-
-    @media (max-width: 900px) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
     @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-      gap: 15px;
+      gap: 20px;
     }
-  }
-
-  &-stat {
-    min-height: 140px;
-    padding: 30px 28px;
-    border: 1px solid #b58b29;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    @media (max-width: 900px) {
-      min-height: 150px;
-    }
-
-    @media (max-width: 600px) {
-      min-height: 125px;
-      padding: 25px;
-    }
-  }
-
-  &-stat-number {
-    display: block;
-    margin-bottom: 8px;
-    color: #d0a533;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 40px;
-    line-height: 1;
-    font-weight: 700;
-
-    @media (max-width: 900px) {
-      font-size: 32px;
-    }
-
-    @media (max-width: 600px) {
-      font-size: 34px;
-    }
-  }
-
-  &-stat-text {
-    color: #9db5c2;
-    font-size: 16px;
-    letter-spacing: 1.2px;
-    line-height: 1.5;
-
-    @media (max-width: 900px) {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 900px) {
-    padding: 70px 6%;
-  }
-
-  @media (max-width: 600px) {
-    padding: 55px 20px 70px;
   }
 }
