@@ -52,11 +52,11 @@
         color: #A88428;
     }
 
-    a {
+    /*a {
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
+    }*/
 }
 
 nav {
@@ -99,6 +99,8 @@ nav {
     .header-contact-link {
         background-color: #C9A84C;
         border: 1px solid #EDD9A3;
+
+        padding: 15px;
         
         a {
             color: #162B36;
