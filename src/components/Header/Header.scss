@@ -1,12 +1,15 @@
 .header {
+    position: relative;
+    z-index: 1000;
+
     background-color: #162B36;
     color: #EDD9A3;
+
     padding: 20px 4%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
 
     // =========================
     // BRAND
@@ -20,66 +23,90 @@
         display: flex;
         align-items: center;
         gap: 10px;
+
         text-decoration: none;
     }
 
     &-logo-container {
-        background-color: #C9A84C;
-        color: #162B36;
-        border: 1px solid #EDD9A3;
-        border-radius: 10%;
-
         width: 50px;
         height: 50px;
+
+        flex-shrink: 0;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        flex-shrink: 0;
+        background-color: #C9A84C;
+        color: #162B36;
 
+        border: 1px solid #EDD9A3;
+        border-radius: 10%;
+
+        font-size: 24px;
         font-weight: 700;
         letter-spacing: 1.2px;
-        font-size: 24px;
+
+        transition: background-color 0.2s ease;
     }
 
     &-identity {
         display: flex;
         flex-direction: column;
-        justify-content: center;
     }
 
     &-name,
     &-title {
         margin: 0;
         line-height: 1.2;
-        white-space: nowrap;
     }
 
     &-name {
         color: #EDD9A3;
+
         font-size: 16px;
         font-weight: 600;
         letter-spacing: 1.2px;
+
+        transition: color 0.2s ease;
     }
 
     &-title {
         color: #A88428;
+
         font-size: 12px;
         letter-spacing: 1px;
+
+        transition: color 0.2s ease;
+    }
+
+    // =========================
+    // BRAND HOVER
+    // =========================
+
+    &-brand-link:hover {
+        .header-logo-container {
+            background-color: #EDD9A3;
+        }
+
+        .header-name {
+            color: #C9A84C;
+        }
+
+        .header-title {
+            color: #EDD9A3;
+        }
     }
 
     // =========================
     // NAVIGATION
     // =========================
 
-    nav {
+    &-navigation {
         flex-shrink: 0;
     }
 
     &-nav {
-        list-style: none;
-
         display: flex;
         align-items: center;
         gap: 25px;
@@ -87,15 +114,17 @@
         margin: 0;
         padding: 0;
 
+        list-style: none;
+
         a {
+            display: block;
+
             color: #EDD9A3;
             text-decoration: none;
 
             font-size: 15px;
             font-weight: 400;
             letter-spacing: 1.1px;
-
-            white-space: nowrap;
 
             transition: color 0.2s ease;
 
@@ -113,12 +142,9 @@
         background-color: #C9A84C;
         border: 1px solid #EDD9A3;
 
-        padding: 0;
-
         transition: background-color 0.2s ease;
 
         a {
-            display: block;
             padding: 10px 16px;
 
             color: #162B36;
@@ -135,11 +161,47 @@
     }
 
     // =========================
+    // HAMBURGER
+    // =========================
+
+    &-menu-button {
+        display: none;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 8px;
+
+        background: transparent;
+        border: 1px solid #EDD9A3;
+
+        cursor: pointer;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        span {
+            display: block;
+
+            width: 22px;
+            height: 2px;
+
+            background-color: #EDD9A3;
+
+            transition:
+                transform 0.25s ease,
+                opacity 0.2s ease;
+        }
+    }
+
+    // =========================
     // TABLETTE
     // =========================
 
     @media (max-width: 1000px) {
-        gap: 20px;
+        padding: 18px 4%;
 
         &-nav {
             gap: 15px;
@@ -150,18 +212,19 @@
             }
         }
 
+        &-logo-container {
+            width: 45px;
+            height: 45px;
+
+            font-size: 20px;
+        }
+
         &-name {
             font-size: 14px;
         }
 
         &-title {
             font-size: 10px;
-        }
-
-        &-logo-container {
-            width: 45px;
-            height: 45px;
-            font-size: 20px;
         }
 
         &-contact-link {
@@ -176,30 +239,83 @@
     // =========================
 
     @media (max-width: 750px) {
-        flex-direction: column;
-        align-items: stretch;
 
         padding: 15px 5%;
-        gap: 20px;
 
-        &-brand-link {
-            justify-content: center;
+        flex-wrap: wrap;
+
+        &-menu-button {
+            display: flex;
         }
 
-        nav {
+        &-navigation {
             width: 100%;
+
+            display: grid;
+            grid-template-rows: 0fr;
+
+            transition: grid-template-rows 0.3s ease;
+
+            // Important pour l'animation
+            > .header-nav {
+                overflow: hidden;
+            }
+
+            &.is-open {
+                grid-template-rows: 1fr;
+
+                margin-top: 20px;
+            }
         }
 
         &-nav {
-            width: 100%;
+            min-height: 0;
 
-            justify-content: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
 
-            gap: 12px 18px;
+            border-top: 1px solid rgba(237, 217, 163, 0.3);
+
+            li {
+                border-bottom: 1px solid rgba(237, 217, 163, 0.15);
+            }
 
             a {
-                font-size: 13px;
+                padding: 15px 5px;
+
+                font-size: 14px;
+                letter-spacing: 1px;
+
+                text-align: center;
+            }
+        }
+
+        &-contact-link {
+            margin-top: 10px;
+
+            border: 1px solid #EDD9A3;
+
+            a {
+                padding: 12px;
+            }
+        }
+
+        // =========================
+        // ANIMATION HAMBURGER
+        // =========================
+
+        &-menu-button.is-open {
+            span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
             }
         }
     }
@@ -209,9 +325,13 @@
     // =========================
 
     @media (max-width: 450px) {
+
+        padding: 12px 5%;
+
         &-logo-container {
             width: 40px;
             height: 40px;
+
             font-size: 18px;
         }
 
@@ -223,18 +343,12 @@
             font-size: 9px;
         }
 
-        &-nav {
-            gap: 10px 14px;
+        &-menu-button {
+            width: 38px;
+            height: 38px;
 
-            a {
-                font-size: 11px;
-                letter-spacing: 0.5px;
-            }
-        }
-
-        &-contact-link {
-            a {
-                padding: 7px 10px;
+            span {
+                width: 20px;
             }
         }
     }
