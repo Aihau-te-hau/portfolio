@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect
+    x="2"
+    y="2"
+    width="60"
+    height="60"
+    rx="6"
+    fill="#C9A84C"
+    stroke="#EDD9A3"
+    stroke-width="2"
+  />
+
+  <text
+    x="32"
+    y="41"
+    text-anchor="middle"
+    font-family="Georgia, serif"
+    font-size="27"
+    font-weight="700"
+    fill="#162B36"
+  >
+    AH
+  </text>
+</svg>
