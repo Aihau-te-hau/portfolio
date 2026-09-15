@@ -1,4 +1,3 @@
-import Logo from './Logo.jsx'
 import './Header.scss'
 
 function Header() {
@@ -11,8 +10,7 @@ function Header() {
                 className="header-brand-link"
                 >
                     <div className="header-logo-container">
-                        <p className="header-logo-text">AH</p>
-                        {/*<Logo /> */}
+                        <span className="header-logo-text">AH</span>
                     </div>
 
                     <div className="header-identity">

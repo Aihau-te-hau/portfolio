@@ -5,6 +5,7 @@ function Card() {
       viewBox="0 0 600 700"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
+      alt="carte de visite de Aihau-te-Hau"
     >
       {/* Cadre extérieur */}
       <rect

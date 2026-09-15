@@ -52,11 +52,13 @@
         color: #A88428;
     }
 
-    /*a {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }*/
+    @media (max-width: 900px) {
+        font-size: 0.8rem;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 0.6rem;
+    }
 }
 
 nav {

@@ -99,4 +99,13 @@
         }
     }
     
+    @media (max-width: 600px) {
+        .social-links {
+            gap: 30px;
+        }
+
+        .contact-link {
+            font-size: 0.8rem;
+        }
+    }
 }
