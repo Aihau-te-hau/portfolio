@@ -1,121 +1,241 @@
 .header {
     background-color: #162B36;
     color: #EDD9A3;
-    padding: 20px 4% 20px;
+    padding: 20px 4%;
 
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    gap: 30px;
+
+    // =========================
+    // BRAND
+    // =========================
+
+    &-brand {
+        flex-shrink: 0;
+    }
 
     &-brand-link {
         display: flex;
-        flex-direction: row;
         align-items: center;
         gap: 10px;
+        text-decoration: none;
+    }
 
-        .header-logo-container {
-            background-color: #C9A84C;
-            color: #162B36;
-            border: 1px solid #EDD9A3;
-            border-radius: 10%;
-            padding: 5px;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            letter-spacing: 1.2px;
-            font-size: 24px;
+    &-logo-container {
+        background-color: #C9A84C;
+        color: #162B36;
+        border: 1px solid #EDD9A3;
+        border-radius: 10%;
 
-            @media (max-width: 600px) {
-                width: 40px;
-                height: 40px;
-            }
-        }
+        width: 50px;
+        height: 50px;
 
-        &:hover {
-            .header-logo-container {
-                background-color: #EDD9A3;
-            }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-            .header-name {
-                color: #C9A84C;
-            }
+        flex-shrink: 0;
 
-            .header-title {
-                color: #EDD9A3;
-            }
-        }
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        font-size: 24px;
+    }
+
+    &-identity {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-name,
+    &-title {
+        margin: 0;
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    &-name {
+        color: #EDD9A3;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
     }
 
     &-title {
         color: #A88428;
+        font-size: 12px;
+        letter-spacing: 1px;
     }
 
-    @media (max-width: 900px) {
-        font-size: 0.8rem;
+    // =========================
+    // NAVIGATION
+    // =========================
+
+    nav {
+        flex-shrink: 0;
     }
 
-    @media (max-width: 600px) {
-        font-size: 0.6rem;
-    }
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    @media (max-width: 600px) {
-        gap: 10px;
-    }
-
-    a {
-        color: #EDD9A3;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 400;
-        letter-spacing: 1.2px;
-
-        &:hover {
-            color: #A88428;
-        }
-
-        @media (max-width: 600px) {
-            font-size: 14px;
-        }
-    }
-
-    ul {
+    &-nav {
         list-style: none;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
 
-        @media (max-width: 600px) {
-            gap: 10px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        margin: 0;
+        padding: 0;
+
+        a {
+            color: #EDD9A3;
+            text-decoration: none;
+
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: 1.1px;
+
+            white-space: nowrap;
+
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #A88428;
+            }
         }
     }
 
-    .header-contact-link {
+    // =========================
+    // CONTACT
+    // =========================
+
+    &-contact-link {
         background-color: #C9A84C;
         border: 1px solid #EDD9A3;
 
-        padding: 15px;
-        
-        a {
-            color: #162B36;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-weight: 600;
+        padding: 0;
 
-            
+        transition: background-color 0.2s ease;
+
+        a {
+            display: block;
+            padding: 10px 16px;
+
+            color: #162B36;
+            font-weight: 600;
         }
 
         &:hover {
-                background-color: #EDD9A3;
+            background-color: #EDD9A3;
+
+            a {
                 color: #162B36;
             }
+        }
+    }
+
+    // =========================
+    // TABLETTE
+    // =========================
+
+    @media (max-width: 1000px) {
+        gap: 20px;
+
+        &-nav {
+            gap: 15px;
+
+            a {
+                font-size: 13px;
+                letter-spacing: 0.8px;
+            }
+        }
+
+        &-name {
+            font-size: 14px;
+        }
+
+        &-title {
+            font-size: 10px;
+        }
+
+        &-logo-container {
+            width: 45px;
+            height: 45px;
+            font-size: 20px;
+        }
+
+        &-contact-link {
+            a {
+                padding: 8px 12px;
+            }
+        }
+    }
+
+    // =========================
+    // MOBILE
+    // =========================
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 15px 5%;
+        gap: 20px;
+
+        &-brand-link {
+            justify-content: center;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        &-nav {
+            width: 100%;
+
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 12px 18px;
+
+            a {
+                font-size: 13px;
+            }
+        }
+    }
+
+    // =========================
+    // PETIT MOBILE
+    // =========================
+
+    @media (max-width: 450px) {
+        &-logo-container {
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+        }
+
+        &-name {
+            font-size: 13px;
+        }
+
+        &-title {
+            font-size: 9px;
+        }
+
+        &-nav {
+            gap: 10px 14px;
+
+            a {
+                font-size: 11px;
+                letter-spacing: 0.5px;
+            }
+        }
+
+        &-contact-link {
+            a {
+                padding: 7px 10px;
+            }
+        }
     }
 }
