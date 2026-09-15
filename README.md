@@ -87,7 +87,7 @@ npm -v
 
 ### Cloner le projet
 
-git clone https://github.com/VOTRE-USERNAME/VOTRE-REPOSITORY.git
+git clone https://github.com/Aihau-te-hau/portfolio/tree/master
 
 Puis accéder au dossier :
 
