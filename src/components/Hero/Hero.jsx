@@ -22,7 +22,7 @@ function Hero() {
                     </h1>
 
                     <p className="hero-description">
-                        Développeur full-stack junior spécialisé dans la conception
+                        Développeur full-stack spécialisé dans la conception
                         d'expériences web modernes avec React, TypeScript et Tailwind CSS.
                         France, Suisse.
                     </p>
